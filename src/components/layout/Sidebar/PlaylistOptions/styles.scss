@@ -1,0 +1,71 @@
+@import "@/scss/extends.scss";
+@import "@/scss/variables.scss";
+
+.playlists-options-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: $sidebar-left-space;
+  margin-bottom: 0.3rem;
+
+  > .title {
+    width: 100%;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: start;
+    background: none;
+  }
+
+  > button {
+    overflow: hidden;
+    @extend %flex-center;
+    @extend %base-transition;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: $light-gray;
+    background-color: $light-gray;
+    font-weight: bold;
+    border-bottom: 0.5rem solid $dark-black;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #fff;
+    }
+
+    > .btn-icon-bg {
+      @extend %flex-center;
+      height: 35px;
+      width: 32px;
+
+      &.bg-gradient {
+        background: rgb(85, 79, 194);
+        background: linear-gradient(
+          90deg,
+          rgba(85, 79, 194, 1) 19%,
+          rgba(107, 93, 195, 1) 46%,
+          rgba(148, 140, 199, 1) 100%
+        );
+      }
+    }
+
+    > .btn-text {
+      @extend %flex-center;
+      justify-content: flex-start;
+      position: absolute;
+      left: 32px;
+      width: 100%;
+      height: 40px;
+      padding-left: 1rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+      background-color: $dark-black;
+    }
+  }
+}

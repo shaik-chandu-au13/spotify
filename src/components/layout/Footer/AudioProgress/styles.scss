@@ -1,0 +1,25 @@
+@import "@/scss/variables.scss";
+@import "@/scss/extends.scss";
+
+.audio-progress-container {
+  width: 100%;
+  position: relative;
+  height: 10px;
+
+  > .time-text {
+    color: $light-gray;
+    font-size: 0.7rem;
+    position: absolute;
+    top: 5px;
+    cursor: default;
+
+    &.current-time {
+      left: 0;
+      transform: translate(-150%, -50%);
+    }
+    &.max-time {
+      right: 0;
+      transform: translate(150%, -50%);
+    }
+  }
+}

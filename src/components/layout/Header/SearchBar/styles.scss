@@ -1,0 +1,33 @@
+@import "@/scss/extends.scss";
+@import "@/scss/variables.scss";
+
+.searchbar-container {
+  position: relative;
+  margin: 0 1rem;
+
+  .search-input {
+    height: 40px;
+    background-color: #fff;
+    width: 365px;
+    border-radius: 2rem;
+    padding: 0 3rem;
+  }
+
+  .search-icon {
+    @extend %flex-center;
+    color: $dark-black;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) translateX(50%);
+  }
+
+  .search-clear-icon {
+    @extend %flex-center;
+    color: $dark-black;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}

@@ -1,0 +1,7 @@
+@import "@/scss/extends.scss";
+
+.home-container {
+  @extend %fade-in-animation;
+  width: 100%;
+  max-width: 1950px;
+}

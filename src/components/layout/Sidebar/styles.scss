@@ -1,0 +1,78 @@
+@import "@/scss/extends.scss";
+@import "@/scss/variables.scss";
+
+.sidebar {
+  grid-area: sidebar;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $dark-black;
+  color: $light-gray;
+  padding-right: 0.15rem;
+  cursor: default;
+
+  > .brand {
+    @extend %flex-center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 87px;
+    padding-left: $sidebar-left-space;
+
+    .brand-logo {
+      width: 130px;
+      height: 100%;
+      color: #fff;
+    }
+  }
+
+  > .divider {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.7rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: $sidebar-left-space;
+      width: calc(100% - 2.8rem);
+      border-bottom: 1px solid $light-black;
+    }
+  }
+
+  > .container-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .btn-install {
+      @extend %flex-center;
+      justify-content: flex-start;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 42px;
+      padding-left: $sidebar-left-space;
+
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #909090;
+      background-color: #000000;
+      transition: all 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+
+    .btn-install > svg {
+      margin-right: 1rem;
+      margin-left: 0.2rem;
+      font-size: 16px;
+      object-fit: contain;
+    }
+  }
+}

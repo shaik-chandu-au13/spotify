@@ -1,0 +1,39 @@
+@import "@/scss/extends.scss";
+@import "@/scss/variables.scss";
+
+ul.drop-down {
+  @extend %flex-center;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 5;
+  overflow: hidden;
+  border-radius: 3px;
+  text-align: start;
+  box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.75);
+
+  > li.drop-item {
+    color: $light-gray;
+    background-color: $dark-gray;
+    width: 100%;
+    padding: 10px 18px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #353535;
+    }
+
+    &:last-of-type {
+      border-top: 1px solid #464646;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .drop-down {
+    width: 120px;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../scss/extends.scss";
+
+ul.category-grid-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-bottom: 1rem;
+
+  > li.grid-item {
+    @extend %flex-center;
+    @extend %base-transition;
+    min-height: 200px;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding: 1rem;
+    &:hover {
+      cursor: pointer;
+      filter: brightness(120%);
+    }
+
+    > .grid-text {
+      word-wrap: normal;
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 2rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "@/scss/extends.scss";
+@import "@/scss/variables.scss";
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0.5rem;
+  padding-right: 0.3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+  > li {
+    @extend %flex-center;
+    @extend %base-transition;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      background-color: $light-black;
+      color: #fff;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .text {
+      letter-spacing: 0.5px;
+      margin-left: 1rem;
+    }
+  }
+}
